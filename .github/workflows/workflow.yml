@@ -1,0 +1,21 @@
+name: CI by Kateryna
+
+on:
+  pull_request:
+    branches:
+      - main
+
+env:
+  GITHUB_ACTIONS: Python_app
+
+jobs:
+  github-task-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Hello World!"
+      - run: echo "Workflow started by ${{ github.actor }}"
+      - run: echo "${{ env.GITHUB_ACTIONS }}"
+      - run: echo "Branch: ${{ github.ref }}"
+      - run: echo "Repo: ${{ github.repository }}"
+      - run: echo "Event: ${{ github.event_name }}"
