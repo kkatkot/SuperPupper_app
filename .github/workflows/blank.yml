@@ -27,7 +27,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      - run: echo ${{ env.GITHUB_ACTIONS }}"
+      - run: echo ${{ env.GITHUB_ACTIONS }}
       
       # Runs a single command using the runners shell
       - name: Run a one-line script
