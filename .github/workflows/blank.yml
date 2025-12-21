@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+e# This is a basic workflow to help you get started with Actions
 
 name: Kateryna_make_CI
 
@@ -27,7 +27,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      - run: echo ${{ GITHUB_ACTIONS }}"
+      - run: echo ${{ env.GITHUB_ACTIONS }}"
       
       # Runs a single command using the runners shell
       - name: Run a one-line script
