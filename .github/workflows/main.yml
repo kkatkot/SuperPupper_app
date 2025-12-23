@@ -10,7 +10,7 @@ on:
 
 env:
   PythonVersion: 3.8
-  DockerImageName: ${{ github.actor }}_todoapp
+  DockerImageName: katkot_todoapp
 
 jobs:
   python-ci:
@@ -105,10 +105,10 @@ jobs:
        run: helm template kube2py ./kube2py/ -f ./kube2py/values.yaml
 
      - name: Lint Helm
-       run: helm lint ./kube2py/
+       run: helm lint ./helm-charts/kube2py/
 
      - name: Package Helm
-       run: helm package ./kube2py
+       run: helm package ./helm-charts/kube2py
 
      - name: Upload Helm artifacts
        uses: actions/upload-artifact@v4
